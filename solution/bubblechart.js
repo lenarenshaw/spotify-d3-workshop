@@ -57,7 +57,7 @@ async function getAndVisualizeSpotifyData(){
 
             // Create a weird treelike structure with values for each datapoint?
             const nodes = d3.hierarchy(dataset)
-                .sum(function(d) { console.log(d); return d.Count; });
+                .sum(function(d) { console.log(d); return d.popularity; });
             console.log(nodes);
             console.log(bubble(nodes).leaves());
 
@@ -75,7 +75,7 @@ async function getAndVisualizeSpotifyData(){
             node.append("title")
                 .text(function(d) {
                     console.log(d);
-                    return d.data.Name + ": " + d.data.Count;
+                    return d.data.name + ": " + d.data.popularity;
                 });
 
             // add the circles with colors
@@ -92,7 +92,7 @@ async function getAndVisualizeSpotifyData(){
                 .attr("dy", ".2em")
                 .style("text-anchor", "middle")
                 .text(function(d) {
-                    return d.data.Name.substring(0, d.r / 3);
+                    return d.data.name.substring(0, d.r / 3);
                 })
                 .attr("font-family", "sans-serif")
                 .attr("font-size", function(d){
@@ -105,7 +105,7 @@ async function getAndVisualizeSpotifyData(){
                 .attr("dy", "1.3em")
                 .style("text-anchor", "middle")
                 .text(function(d) {
-                    return d.data.Count;
+                    return d.data.popularity;
                 })
                 .attr("font-family",  "Gill Sans", "Gill Sans MT")
                 .attr("font-size", function(d){
