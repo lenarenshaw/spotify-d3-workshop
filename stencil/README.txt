@@ -8,7 +8,7 @@ Copy the Client ID and Secret Client ID into the variables at the top of the bub
 way to do this is to follow the instructions on the Spotify website:
 https://developer.spotify.com/documentation/web-api/quick-start/. Then, go to the documentation
 for the request you want to use (https://developer.spotify.com/console/get-current-user-top-artists-and-tracks/),
-log in, and click generate token. This will ensure your token can be used for this function.
+set type to "tracks", click "get token", and log in. This will ensure your token can be used for this function.
 Paste this token into the bubblechart.js file.
 
 Other helpful links:
