@@ -26,8 +26,7 @@ async function getAndVisualizeSpotifyData(){
             // Create a weird treelike structure with values for each datapoint?
             const nodes = d3.hierarchy(dataset)
                 .sum(function(d) { console.log(d); return d.popularity; });
-            console.log(nodes);
-            console.log(bubble(nodes).leaves());
+
 
             // d3.pack is used to create nested circles. When there's no nesting and only children on same level, creates a bubble chart.
             // see https://d3-wiki.readthedocs.io/zh_CN/master/Pack-Layout/
