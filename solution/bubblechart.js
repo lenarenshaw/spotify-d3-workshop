@@ -62,10 +62,10 @@ async function getAndVisualizeSpotifyData(){
 
             // add the name as text
             node.append("text")
-                .attr("dy", ".2em")
+                .attr("dy", "-.5em")
                 .style("text-anchor", "middle")
                 .text(function(d) {
-                    return d.data.name.substring(0, d.r / 3);
+                    return d.data.name.substring(0, d.r / 2);
                 })
                 .attr("font-family", "sans-serif")
                 .attr("font-size", function(d){
@@ -73,9 +73,22 @@ async function getAndVisualizeSpotifyData(){
                 })
                 .attr("fill", "white");
 
+              // add the name as text
+              node.append("text")
+                  .attr("dy", ".8em")
+                  .style("text-anchor", "middle")
+                  .text(function(d) {
+                      return d.data.artists[0].name.substring(0, d.r / 2);
+                  })
+                  .attr("font-family", "sans-serif")
+                  .attr("font-size", function(d){
+                      return d.r/5;
+                  })
+                  .attr("fill", "white");
+
             // add the popularity as text
             node.append("text")
-                .attr("dy", "1.3em")
+                .attr("dy", "1.9em")
                 .style("text-anchor", "middle")
                 .text(function(d) {
                     return d.data.popularity;
