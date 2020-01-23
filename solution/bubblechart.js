@@ -14,7 +14,6 @@ async function getAndVisualizeSpotifyData(){
             const diameter = 600;
 
             // color is a function mapping ints to colors
-            // TODO: Replace with whatever we're gonna do for this
             const color = d3.scaleOrdinal(d3.schemeCategory20);
 
             // Creates an empty svg object in the body of the html with specified width, height, and class.
