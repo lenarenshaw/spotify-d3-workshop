@@ -1,6 +1,6 @@
 const CLIENT_ID = 'c3afef0eb47f4ac1b54ec99fd373fbc5'
 const CLIENT_SECRET = '7424d153e69746baa5532853207b1d40'
-const ACCESS_TOKEN = 'BQCqXkC5YvH8rxTkzEWvKRZrv7RjKcat1IZ5ErsrDRRqftU5XqK4COE2jvrQ54_oXeDhZriPWAUeL-Nx1noHyhZ-7XTOAC0Htr8C_b7KdJqSkFw9BRFQOXYmCR6u_dgDBON3x-lQDE2PwT8cyNHJzfCe'
+const ACCESS_TOKEN = 'BQCSzTPbRVlFiKGGIHJ5CGREP81a_g6cPfWn-_uWyQG2j4GQlvD5_CIYjOmSzFiUoqoGwyEtijopRGj9UDRDMXyWqBCZu5Rfkp6fK_gMfFto0bChdM2IjYYdDh9K1vceexsQeS_uzl1KjXvfPfrdXIof'
 
 async function getAndVisualizeSpotifyData(){
     $.ajax({
@@ -26,8 +26,7 @@ async function getAndVisualizeSpotifyData(){
             // Create a weird treelike structure with values for each datapoint?
             const nodes = d3.hierarchy(dataset)
                 .sum(function(d) { console.log(d); return d.popularity; });
-            console.log(nodes);
-            console.log(bubble(nodes).leaves());
+
 
             // d3.pack is used to create nested circles. When there's no nesting and only children on same level, creates a bubble chart.
             // see https://d3-wiki.readthedocs.io/zh_CN/master/Pack-Layout/

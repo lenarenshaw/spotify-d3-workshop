@@ -24,8 +24,8 @@ async function getAndVisualizeSpotifyData(){
 
             // 4. Use d3.hierarchy to create a treelike structure with the radius for each datapoint's circle.
 
-            // 5. Use d3.pack to create nested circles (won't be displayed yet)
-            // d3.pack is used to create nested circles. When there's no nesting and only children on same level, creates a bubble chart.
+            // 5. Use d3.pack to create nested circles (won't be displayed yet). 
+            // When there's no nesting and only children on same level, creates a bubble chart.
             // see https://d3-wiki.readthedocs.io/zh_CN/master/Pack-Layout/
 
             // 6. Add a node class (object of type g) for each data, and set its location using an attribute with "transform".
