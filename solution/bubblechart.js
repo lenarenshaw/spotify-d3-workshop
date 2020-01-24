@@ -1,6 +1,6 @@
 const CLIENT_ID = 'c3afef0eb47f4ac1b54ec99fd373fbc5'
 const CLIENT_SECRET = '7424d153e69746baa5532853207b1d40'
-const ACCESS_TOKEN = 'BQDb-kb1-GKI6AwJFTGaPsVE6EpmVbyEroFkc2fOilKoShiG6AX6yB3Blad8Ogi_OQ2g8sJtr2zmUL2gKOM0n-sgSuO0loZ26whTpeQQKR-Ndd2-M3Tso7Q7V5P4eVoIqYTVra0TArr7l9GJeojXq22l'
+const ACCESS_TOKEN = 'BQDDSTc45UhVVQEeSaMFPzLWGyCc3FrAR4mhtn-gVicUmdg1LvSIvMQmM4NvgqxU4TNOCHM_aR5j2MJC52WLZwtIla0qGEsMKJcKFmliEWg4m2hrTdKls7XjSJTfDioq0iIjuIvaXx0F-sDPZRtGVXQZ'
 
 async function getAndVisualizeSpotifyData(){
     $.ajax({
