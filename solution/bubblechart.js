@@ -23,7 +23,6 @@ async function getAndVisualizeSpotifyData(){
                 .attr("height", diameter)
                 .attr("class", "bubble");
 
-            // Create a weird treelike structure with values for each datapoint?
             const nodes = d3.hierarchy(dataset)
                 .sum(function(d) { console.log(d); return d.popularity ** 3; });
 
@@ -35,8 +34,8 @@ async function getAndVisualizeSpotifyData(){
                 .padding(1.5);
 
             // add a node class (object of type g) for each data
-            const node = svg.selectAll(".node") // we can actually use any identifier that's not actually used here?
-                .data(bubble(nodes).leaves()) // use .leaves() instead?
+            const node = svg.selectAll(".node")
+                .data(bubble(nodes).leaves())
                 .enter()
                 .append("g")
                 .attr("class", "node")
@@ -99,9 +98,6 @@ async function getAndVisualizeSpotifyData(){
                 })
                 .attr("fill", "white");
 
-            // minor styling thing
-            // d3.select(self.frameElement)
-            //     .style("height", diameter + "px");
             return dataset;
         }
     });
