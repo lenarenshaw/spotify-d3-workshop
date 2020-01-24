@@ -1,7 +1,7 @@
 // Tokens and keys necessary for getting Spotify data. See the README for how to replace these with your values.
 const CLIENT_ID = 'c3afef0eb47f4ac1b54ec99fd373fbc5'
 const CLIENT_SECRET = '7424d153e69746baa5532853207b1d40'
-const ACCESS_TOKEN = 'BQCqXkC5YvH8rxTkzEWvKRZrv7RjKcat1IZ5ErsrDRRqftU5XqK4COE2jvrQ54_oXeDhZriPWAUeL-Nx1noHyhZ-7XTOAC0Htr8C_b7KdJqSkFw9BRFQOXYmCR6u_dgDBON3x-lQDE2PwT8cyNHJzfCe'
+const ACCESS_TOKEN = 'BQDb-kb1-GKI6AwJFTGaPsVE6EpmVbyEroFkc2fOilKoShiG6AX6yB3Blad8Ogi_OQ2g8sJtr2zmUL2gKOM0n-sgSuO0loZ26whTpeQQKR-Ndd2-M3Tso7Q7V5P4eVoIqYTVra0TArr7l9GJeojXq22l'
 
 async function getAndVisualizeSpotifyData(){
     // Ajax is a jQuery tool used for updating webpages in real time.  It is essentially
@@ -24,7 +24,7 @@ async function getAndVisualizeSpotifyData(){
 
             // 4. Use d3.hierarchy to create a treelike structure with the radius for each datapoint's circle.
 
-            // 5. Use d3.pack to create nested circles (won't be displayed yet). 
+            // 5. Use d3.pack to create nested circles (won't be displayed yet).
             // When there's no nesting and only children on same level, creates a bubble chart.
             // see https://d3-wiki.readthedocs.io/zh_CN/master/Pack-Layout/
 
@@ -34,7 +34,9 @@ async function getAndVisualizeSpotifyData(){
 
             // 8. Add the name as text
 
-            // 9. Add the popularity as text
+            // 9. Add the artist as text
+
+            // 10. Add the popularity as text
 
             return dataset;
         }
